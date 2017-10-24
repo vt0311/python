@@ -12,7 +12,7 @@ print(str.startswith('very'))
 print(str.endswith('you'))
 
 print(str.find('meet'))
-'''index 개념, length 게념이 있다.'''
+'''index 개념, length 개념이 있다.'''
 
 print(str.rfind('e'))
 
