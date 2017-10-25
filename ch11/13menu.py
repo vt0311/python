@@ -1,7 +1,7 @@
 '''
 Created on 2017. 10. 24.
 
-@author: acorn
+@author: hsw
 '''
 import wx
 
@@ -27,15 +27,15 @@ if __name__=='__main__':
     
     #mitem1 = wx.MenuItem(mnu, text='Close')
     #mitem1 = mnu.Append('1', 'New')
-    mitem1 = mnu.Append(0, 'New')  
-    mitem2 = mnu.Append(1, 'Open')
-    mitem3 = mnu.Append(2, 'Save')
-    mitem4 = mnu.AppendSeparator()
-    mitem5 = mnu.Append(4, 'Close')
+    mitm1 = mnu.Append(0, "New")  
+    mitm2 = mnu.Append(1, "Open")
+    mitm3 = mnu.Append(2, "Save")
+    mitm4 = mnu.AppendSeparator()
+    mitm5 = mnu.Append(4, "Close")
     
     #mnu.Append(0, mitem1, 'Close', wx.ITEM_NORMAL)
-    mbar.Append(mnu, 'file')
-    
+    mbar.Append(mnu, 'File')
+    frm.SetMenuBar(mbar)
     #mitem1 = mnu.Append('1', 'New')
     
     '''
@@ -43,18 +43,24 @@ if __name__=='__main__':
     mnu.Append(0, 'Open')
     mnu.Append(0, 'Save')
     '''
-    mnu.AppendSeparator()
+    #mnu.AppendSeparator()
     
-    clsitem = mnu.Append(0, 'Close')
-    mbar.Append(mnu, 'File')      
+    #clsitem = mnu.Append(0, 'Close')
+  #  mbar.Append(mnu, 'File')      
    # mnu = wx.Menu('Save')
    # mnu = wx.Menu('close')
     
    # menubar.Append(mnu, 'File')
-    frm.SetMenuBar(mbar)
+  #  frm.SetMenuBar(mbar)
     
-    evObj = EvtHandler13()
-    frm.Bind(wx.EVT_MENU, evObj.evtMenu, clsitem)
+    evObj = EvtHandler13(frm)
+   # frm.Bind(wx.EVT_MENU, evObj.evtMenu, clsitem)
+    frm.Bind(wx.EVT_MENU, evObj.evtMenu, mitm1)
+    frm.Bind(wx.EVT_MENU, evObj.evtMenu, mitm2)
+    frm.Bind(wx.EVT_MENU, evObj.evtMenu, mitm3)
+    frm.Bind(wx.EVT_MENU, evObj.evtMenu, mitm4)
+    frm.Bind(wx.EVT_MENU, evObj.evtMenu, mitm5)
+    
     
     frm.Show(show=True)
     app.MainLoop()

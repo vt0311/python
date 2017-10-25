@@ -13,12 +13,12 @@ class MyFrame(wx.Frame):
         '''
         Constructor
         '''
-        wx.Frame.__init__(self, parent=None, title)
+        wx.Frame.__init__(self, parent=None, title='hello')
     
 app = wx.App()
 
 frm = MyFrame()
 
-frm.show(show=True)
+frm.Show(show=True)
 
 app.MainLoop()
