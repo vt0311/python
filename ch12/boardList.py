@@ -1,78 +1,53 @@
 '''
 Created on 2017. 10. 25.
 
-@author: acorn
+@author: hsw
+checked
 '''
 
 import wx
-import cx_Oracle
+#from ch12 import 
+from ch12.boardlistevt import BoardListEvt
 
 
-conn = cx_Oracle.connect('scott/tiger@localhost:1521/xe')
-cursor = conn.cursor()
-cursor.execute('select * from board')
-for row in cursor:
-                print(row) 
-
-class BoardListEvt:
-    evList = None
-    def __init__(self, fromFrmList):
-        evList = fromFrmList
-        
-    def boardListEvt(self, ev):
-        cmd = ev.GetEventObject().GetName()
-        print(cmd)
-        if cmd =='select':
-            pass
-        elif cmd == 'insert':
-            pass
 
 class BoardList:
+    lfrm = None
+    lbtn2 = None
     def makeGui(self):
-        lfrm = wx.Frame(None, title='BoardList')
-        lpan = wx.Panel(lfrm)
+        self.lfrm = wx.Frame(None, title='BoardList')
+        lpan = wx.Panel(self.lfrm)
         lbtn1 = wx.Button(lpan, label='select(조회)', name='select')
-        lbtn2 = wx.Button(lpan, label='insert(입력)', name='insert')
+        self.lbtn2 = wx.Button(lpan, label='insert(입력)', name='insert')
         
         llistbox = wx.ListBox(lpan)
         
-       # for i in cursor.fetchall():
+        # for i in cursor.fetchall():
         #    llitbox.Append(i)
-            
-           
         
         lVtBox = wx.BoxSizer(wx.VERTICAL)
         
         lpan.SetSizer(lVtBox)
         
-        lVtBox.Add(lbtn1, 0 ,wx.ALIGN_RIGHT)
+        lVtBox.Add(lbtn1, 0, wx.ALIGN_RIGHT)
         lVtBox.Add(llistbox, 1, wx.EXPAND)
-        lVtBox.Add(lbtn2, 0 ,wx.ALIGN_RIGHT)
+        lVtBox.Add(self.lbtn2, 0, wx.ALIGN_RIGHT)
        
-        lfrm.Show(show=True)
+        self.lfrm.Show(show=True)
         
+        #bWriteObj = BoardWrite()
         
         boardlistev = BoardListEvt(llistbox)
         lbtn1.Bind(wx.EVT_LEFT_DOWN, boardlistev.boardListEvt)
-        lbtn2.Bind(wx.EVT_LEFT_DOWN, boardlistev.boardListEvt)
-    
+        #self.lbtn2.Bind(wx.EVT_LEFT_DOWN, boardlistev.boardListEvt)
+'''    
 if __name__ == '__main__':
     app = wx.App()
     
     boardlistObj = BoardList()
     boardlistObj.makeGui()
-    
-    
-    frm = wx.Frame(None, title='Board List')
-    
  
-    
-    pan = wx.Panel(frm)   
         
     app.MainLoop()
-
-
-
-cursor.close()
-conn.close()
+'''
 

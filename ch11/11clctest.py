@@ -1,7 +1,7 @@
 '''
 Created on 2017. 10. 24.
 
-@author: acorn
+@author: hsw
 '''
 import wx
 
