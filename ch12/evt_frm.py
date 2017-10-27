@@ -20,7 +20,7 @@ class FrameChangeEvt:
         if cmd == 'insert':
             self.lfrm.Show(False)
             self.lfrm.Show(True)
-        elif cmd == 'List':
+        elif cmd == 'list':
             self.wfrm.Show(False)
             self.lfrm.Show(True)  
             
