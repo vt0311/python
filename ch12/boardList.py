@@ -6,7 +6,7 @@ checked
 '''
 
 import wx
-#from ch12 import 
+#from ch12guiboard import 
 from ch12.boardlistevt import BoardListEvt
 
 

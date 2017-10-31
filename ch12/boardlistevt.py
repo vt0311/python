@@ -7,7 +7,7 @@ checked
 
 import wx
 from ch12 import board_dao 
-#from ch12.board_dao import boardListSelect
+#from ch12guiboard.board_dao import boardListSelect
 
 class BoardListEvt:
     evListBox = None
