@@ -26,7 +26,7 @@ def get_request_url(url):
 #[CODE 2]
 def getFacebookNumericID(page_id, access_token):
     
-    base = "https://graph.facebook.com/v2.8"
+    base = "https://graph.facebook.com/v2.10"
     node = "/" + page_id
     parameters = "/?access_token=%s" % access_token
     url = base + node + parameters
@@ -42,7 +42,7 @@ def getFacebookNumericID(page_id, access_token):
 #[CODE 3]
 def getFacebookPost(page_id, access_token, from_date, to_date, num_statuses):
     
-    base = "https://graph.facebook.com/v2.8"
+    base = "https://graph.facebook.com/v2.10"
     node = "/%s/posts" % page_id 
     fields = "/?fields=id,message,link,name,type,shares,reactions," + \
              "created_time,comments.limit(0).summary(true)" + \
@@ -121,7 +121,7 @@ def getPostData(post, access_token, jsonResult):
 #[CODE 5]
 def getFacebookReaction(post_id, access_token):
 
-    base = "https://graph.facebook.com/v2.8"
+    base = "https://graph.facebook.com/v2.10"
     node = "/%s" % post_id
     reactions = "/?fields=" \
                 "reactions.type(LIKE).limit(0).summary(total_count).as(like)" \
@@ -143,12 +143,14 @@ def getFacebookReaction(post_id, access_token):
 #[CODE 6]
 def main():
     page_name = "chosun"
-    app_id = "200920440387013"
-    app_secret = "daccef14d5cd41c0e95060d65e66c41d"
+    #app_id = "1955525714721865"
+    app_id = "1771849489774424"
+    #app_secret = "f756842ec6ed2546829cf9d9600f0452"
+    app_secret = "c1e6029bf13c291dc7f53630d8af14ac"
     access_token = app_id + "|" + app_secret
    
-    from_date = '2016-10-01'
-    to_date = '2017-03-12'
+    from_date = '2017-01-01'
+    to_date = '2017-05-30'
     
     num_posts = 50
     go_next = True

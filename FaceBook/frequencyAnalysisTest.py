@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 from konlpy.tag import Twitter 
 from collections import Counter
 from matplotlib import font_manager, rc
+import string
+#from string import maketrans
 
 
 def showGraph( wordInfo ):
@@ -42,25 +44,38 @@ def main():
 #     rfile = open( openFileName, 'r', encoding='utf-8').read()
     
     # JTBC 뉴스    
-    openFileName = 'jtbcnews_facebook_2016-10-01_2017-03-12.json'
+    #openFileName = 'jtbcnews_facebook_2016-10-01_2017-03-12.json'
+    #rfile = open( openFileName, 'r', encoding='utf-8-sig').read()
+    
+    # 테스트
+    openFileName = 'tanhak_naver_news.json'
     rfile = open( openFileName, 'r', encoding='utf-8-sig').read()
+    
 
     cloudImagePath = openFileName + '.jpg'
     
     jsonData = json.loads( rfile )
-    message = '' 
+    description = '' 
 
     #[code 3]
     for item in jsonData:
-        if 'message' in item.keys():
+        if 'description' in item.keys():
             # 파일 : re_sub.py 파일 참조(치환하는 부분)
-            message = message + re.sub(r'[^\w]', '', item['message']) + ''
+            #description = description + re.sub(r'[^\w]', '', item['description'].replace('대통령', ' ')) + ''
+            #description = description + re.sub(r'[^\w]', '', item['description'].replace('탄핵', ' ')) + ''
+            
+            datas = ['대통령', '탄핵', '민주당', '청와대']
+            for i in datas :
+                description = description + re.sub(r'[^\w]', '', item['description'].replace(datas[i], '')) + ''
+            #translation = {ord('대통령'): '', ord('탄핵'): ''}
+            #description = description + re.sub(r'[^\w]', '', item['description'].translate(ord('대통령'): '', ord('탄핵'): '' )) + ''
+           # description = description + replace('대통령', '', item['description']) + ''
 
-    print('메시지 : ', message)
+    print('설명 : ', description)
 
     #[code 4]
     nlp = Twitter() 
-    nouns = nlp.nouns( message )
+    nouns = nlp.nouns( description )
     count = Counter( nouns )
     print('count 개수 : ', count )
     

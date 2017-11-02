@@ -1,3 +1,6 @@
 eclipse.preferences.version=1
 encoding//FaceBook/getFbNewsFeed.py=utf-8
+encoding//FaceBook/getFbNumericID.py=utf-8
 encoding//FaceBook/getFbPost.py=utf8
+encoding//FaceBook/getJsonData.py=utf-8
+encoding//FaceBook/getJsonEx01.py=utf-8

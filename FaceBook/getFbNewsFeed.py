@@ -10,8 +10,8 @@ if __name__ == '__main__':
     # [CODE 1]
     page_name = "jtbcnews"
     page_id = "240263402699918"
-    app_id = "1771849489774424"
-    app_secret = "c1e6029bf13c291dc7f53630d8af14ac"
+    app_id = "1955525714721865"
+    app_secret = "f756842ec6ed2546829cf9d9600f0452"
     
     # [CODE 2]
     # from_date : 검색 시작일, to_date : 검색 종료일
@@ -22,7 +22,7 @@ if __name__ == '__main__':
     access_token = app_id + "|" + app_secret
 
     # [CODE 3] 
-    base = "https://graph.facebook.com/v2.8"
+    base = "https://graph.facebook.com/v2.10"
     node = "/%s/posts" % page_id
     
     # fields는 페이지 67의 표 참고 

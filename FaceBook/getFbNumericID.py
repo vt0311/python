@@ -7,8 +7,8 @@ if __name__ == '__main__':
 
     # [CODE 1]
     page_name = "jtbcnews"    
-    app_id = "1771849489774424" # 개발자 계정으로 얻은 내 앱 아이디
-    app_secret = "c1e6029bf13c291dc7f53630d8af14ac" # 개발자 계정으로 얻은 내 앱 시크릿 코드
+    app_id = "1955525714721865" # 개발자 계정으로 얻은 내 앱 아이디
+    app_secret = "f756842ec6ed2546829cf9d9600f0452" # 개발자 계정으로 얻은 내 앱 시크릿 코드
     access_token = app_id + "|" + app_secret
 
     # [CODE 2]
@@ -19,6 +19,8 @@ if __name__ == '__main__':
     node = "/" + page_name
     parameters = "/?access_token=%s" % access_token
     url = base + node + parameters
+    
+    print('['+url+']')
     
     # [CODE 3]
     req = urllib.request.Request(url)
