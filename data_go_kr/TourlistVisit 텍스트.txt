@@ -1,0 +1,15 @@
+'''
+jsonData 출력 결과 예시
+{'response': {
+    'header': 
+        {'resultCode': '0000', 'resultMsg': 'OK'}, 
+    'body': 
+        {'items': 
+            {'item': 
+                {'ym': 201101, 'num': 43065, 'natKorNm': '미  국', 'edCd': 'E', 'rnum': 1, 'natCd': 275, 'ed': '방한외래관광객'}
+            }, 
+        'totalCount': 1, 'numOfRows': 10, 'pageNo': 1
+        }
+    }
+}
+'''
