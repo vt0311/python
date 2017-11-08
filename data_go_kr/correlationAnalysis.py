@@ -41,6 +41,7 @@ r_list = [] # 상관 관계 분석 결과를 저장할 리스트
 #[CODE 2]
 def setScatterGraph( tour_table, visit_table, tourpoint):
     #[CODE 8]
+    # tourpoint가 경복궁이라면 tour는 경복궁을 
     tour = tour_table[ tour_table['resNm'] == tourpoint ]
     merge_table = pd.merge(tour, visit_table, left_index=True, right_index=True)
 #     print( merge_table )

@@ -10,7 +10,7 @@
 
 import json
 
-with open('chosun_facebook_mini01.json', 'r', encoding'utf-8') as chosun:
+with open('chosun_facebook_mini01.json', 'r', encoding 'utf-8') as chosun:
     mydata = json.load(chosun)
 
 print(mydata)
