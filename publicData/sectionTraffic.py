@@ -3,7 +3,8 @@ import pandas as pd
 
 mycolumn = ['구간', '차종', '1월', '2월', '3월', '4월', '5월', '6월']
 filename = 'sectionTraffic.csv'
-myframe = pd.read_csv( filename, encoding='EUC-KR')
+#myframe = pd.read_csv( filename, encoding='EUC-KR')
+myframe = pd.read_csv( filename, encoding='UTF-8')
 # print( type(myframe) ) # <class 'pandas.core.frame.DataFrame'>
 # print()
 

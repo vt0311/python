@@ -3,7 +3,8 @@ import pandas as pd
 
 mycolumn = ['구간', '차종', '1월', '2월', '3월', '4월', '5월', '6월']
 filename = 'sectionTraffic.csv'
-myframe = pd.read_csv( filename, encoding='EUC-KR')
+#myframe = pd.read_csv( filename, encoding='EUC-KR')
+myframe = pd.read_csv( filename, encoding='UTF-8')
 # print( type(myframe) ) # <class 'pandas.core.frame.DataFrame'>
 # print()
 
@@ -28,6 +29,7 @@ col_mapping = {'1월':'January', '2월':'February', '3월':'March', \
     '4월':'April', '5월':'May', '6월':'June'}
 mycolumn = ['구간', '차종', '1월', '2월', '3월', '4월', '5월', '6월']
 
+# 데이터베이스의 where절과 같음
 # newframe = myframe[ myframe['구간'] == '서울~신갈JC']
 newframe = myframe[ myframe['구간'] == '서남원~구례화엄']
 
@@ -52,4 +54,4 @@ newframe.plot(kind='bar', rot = 0, title = mytitle, grid = True, alpha = myalpha
 
 filename = 'traffic.png'
 plt.savefig( filename, dpi=400, bbox_inches='tight')
-# plt.show()
+plt.show()
