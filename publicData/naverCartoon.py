@@ -22,7 +22,10 @@ except FileExistsError as err:
     pass # 오류를 무시하고 넘긴다.
 
 def saveFile( image_url, weekday, mytitle ) :
-    # image_url : 웹 상에 존재하는 다운로드할 이미지 경로 + 이름
+    # image_url : 웹 상에 존재하는 다운로드할 이미지 경로 + 이름. 이미지의 출처
+    # weekday :  요일을 의미하는 문자(mon:월요일, ...)
+    #             weekday_dict 변수 참조 요망 
+    # mytitle : 이미지 저장시 파일 이름으로 사용됨.
     image_file = urlopen( image_url )
     # print()
 
@@ -54,7 +57,11 @@ for abcd in mytarget :
     myweekday = result[1].split('=')[1]
     # ------------------------------------------------------------
     imgtag = abcd.find('img')
+    
+    # 공백 없애기
     mytitle = imgtag.attrs['title'].strip() # 만화 제목
+    
+    # 메소드 체이닝 : 특수 문자들 제거
     mytitle = mytitle.replace('?', '').replace(':', '')
     mysrc = imgtag.attrs['src'] # 다운 받을 이미지 경로 + 이름
     # print( mytitleid, end =' ')
