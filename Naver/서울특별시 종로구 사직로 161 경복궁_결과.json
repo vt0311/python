@@ -1,0 +1,24 @@
+{
+    "result": {
+        "items": [
+            {
+                "addrdetail": {
+                    "country": "대한민국",
+                    "dongmyun": "사직로",
+                    "rest": "161 경복궁",
+                    "ri": "",
+                    "sido": "서울특별시",
+                    "sigugun": "종로구"
+                },
+                "address": "서울특별시 종로구 사직로 161 경복궁",
+                "isRoadAddress": true,
+                "point": {
+                    "x": 126.9770162,
+                    "y": 37.5788408
+                }
+            }
+        ],
+        "total": 1,
+        "userquery": "서울특별시 종로구 사직로 161 경복궁"
+    }
+}

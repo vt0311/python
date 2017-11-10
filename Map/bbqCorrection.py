@@ -91,3 +91,6 @@ m_result = m.query('_merge == "left_only"')
 print( '\n좌측에만 있는 행' )
 print( m_result[['sido', 'gungu']] )
 
+m.to_csv('bbq_modify.csv', encoding='utf-8', mode='w', index=True)
+
+print('파일 저장 완료')
