@@ -53,7 +53,8 @@ mean_ratings = mean_ratings.ix[active_titles]
 print('\n성별에 따른 영화 평점의 평균(평점 건수가 250개 이상인 것만)')
 print( mean_ratings )
 
-top_female_ratings = mean_ratings.sort_index(by='F', ascending=False)
+top_female_ratings = mean_ratings.sort_index(ascending=True)
+#top_female_ratings = mean_ratings.sort_index(by='F', ascending=False)
 print('\n여성에게 높은 평점을 받은 영화 목록은')
 print( top_female_ratings[:10] )
 
