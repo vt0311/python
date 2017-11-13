@@ -1,0 +1,4 @@
+Mary,F,10
+Anna,F,20
+Emma,F,30
+Elizabeth,F,40

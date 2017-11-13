@@ -1,0 +1,7 @@
+0번째 요소 영양소 리스트 :  
+{
+	'description': 'Protein', 
+	'units': 'g', 
+	'group': 'Composition', 
+	'value': 25.18
+}
