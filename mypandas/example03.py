@@ -4,7 +4,7 @@ Created on 2017. 11. 6.
 @author: acorn
 '''
 import pandas as pd
-import numpy as np
+import numpytest as np
 from pandas.core.frame import DataFrame
 
 moviefile = 'movie.csv'

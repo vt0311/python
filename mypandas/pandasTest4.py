@@ -22,8 +22,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pandas.core.frame import DataFrame
 
-
-plt.rc('font', family='Malgun Gothic')
+import numpytest as npamily='Malgun Gothic')
 
 boardfile = 'board.csv'
 
