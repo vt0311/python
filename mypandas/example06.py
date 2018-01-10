@@ -6,7 +6,7 @@ Created on 2017. 11. 6.
 @author: acorn
 '''
 
-import nuimport numpytest as nppandas as pd
+import pandas as pd
 import matplotlib.pyplot as plt
 from pandas.core.series import Series
 

@@ -18,7 +18,7 @@ result = np.random.permutation(length)
 print(result)
 print()
 
-#result = np.random.randint(5)
-result = np.random.randint(45) + 1
+result = np.random.randint(5)
+#result = np.random.randint(45) + 1
 print(result)
 print()

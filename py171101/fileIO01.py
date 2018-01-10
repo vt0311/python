@@ -1,4 +1,4 @@
-'''
+''' 
 Created on 2017. 11. 1.
 파일 입출력 1
 @author: acorn

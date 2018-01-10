@@ -6,7 +6,6 @@ Created on 2017. 11. 6.
 @author: acorn
 '''
 import pandas as pd
-impimport numpytest as nprom pandas.core.frame import DataFrame
 
 
 
